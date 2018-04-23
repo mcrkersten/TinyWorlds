@@ -46,13 +46,35 @@ public class Manager : MonoBehaviour {
     {
         if (Input.GetKeyDown("w"))
         {
-            for(int i = 0; i < islandsP1.Length; i++)
+            if(turn == true)
             {
-                if (turn == true)
+                for (int i = 0; i < islandsP1.Length; i++)
                 {
-
+                    if (selected == islandsP1[i])
+                    {
+                        islandsP1[i].GetComponent<Island>().health += 1;
+                    }
+                    else
+                    {
+                        islandsP2[i].GetComponent<Island>().health -= 1;
+                    }
                 }
             }
+            else
+            {
+                for (int i = 0; i < islandsP2.Length; i++)
+                {
+                    if (selected == islandsP2[i])
+                    {
+                        islandsP2[i].GetComponent<Island>().health += 1;
+                    }
+                    else
+                    {
+                        islandsP1[i].GetComponent<Island>().health -= 1;
+                    }
+                }
+            }
+            selected = null;
         }
     }
 
