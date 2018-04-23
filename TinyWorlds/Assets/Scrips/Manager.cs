@@ -27,6 +27,7 @@ public class Manager : MonoBehaviour {
     {
         setColor();
         selectIsland();
+        buttonPress();
 	}
 
     void setColor()
@@ -38,6 +39,20 @@ public class Manager : MonoBehaviour {
         for (int i = 0; i < islandsP2.Length; i++)
         {
             islandsP2[i].GetComponent<Renderer>().material = nonSelected;
+        }
+    }
+
+    void buttonPress()
+    {
+        if (Input.GetKeyDown("w"))
+        {
+            for(int i = 0; i < islandsP1.Length; i++)
+            {
+                if (turn == true)
+                {
+
+                }
+            }
         }
     }
 
