@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 <<<<<<< HEAD:TinyWorlds/Assets/Materials.meta
 guid: 4939c10ee31a78049969e5f38c02893b
 folderAsset: yes
@@ -8,6 +9,11 @@ guid: c1362635598f708478bbedce23128a25
 folderAsset: yes
 timeCreated: 1524488737
 >>>>>>> 250722d9c23345ce60f67039c43219a52bedb61f:TinyWorlds/Assets/Materials.meta
+=======
+guid: fe870cf4f9ff56a49a422b5085923aa0
+folderAsset: yes
+timeCreated: 1524490674
+>>>>>>> Stashed changes
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
