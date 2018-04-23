@@ -11,4 +11,13 @@ public class Island : MonoBehaviour
     {
         manager.selected = this.gameObject;
     }
+
+    private void Update()
+    {
+        if(health == 0)
+        {
+            this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            this.gameObject.GetComponent<Collider>().enabled = false;
+        }
+    }
 }
