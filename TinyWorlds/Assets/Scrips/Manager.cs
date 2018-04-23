@@ -46,7 +46,7 @@ public class Manager : MonoBehaviour {
     {
         if (Input.GetKeyDown("w"))
         {
-            if(turn == true)
+            if (turn == true)
             {
                 for (int i = 0; i < islandsP1.Length; i++)
                 {
@@ -54,9 +54,12 @@ public class Manager : MonoBehaviour {
                     {
                         islandsP1[i].GetComponent<Island>().health += 1;
                     }
-                    else
+                }
+                for (int x = 0; x < islandsP2.Length; x++)
+                {
+                    if (selected == islandsP2[x])
                     {
-                        islandsP2[i].GetComponent<Island>().health -= 1;
+                        islandsP2[x].GetComponent<Island>().health -= 1;
                     }
                 }
             }
@@ -68,12 +71,16 @@ public class Manager : MonoBehaviour {
                     {
                         islandsP2[i].GetComponent<Island>().health += 1;
                     }
-                    else
-                    {
-                        islandsP1[i].GetComponent<Island>().health -= 1;
-                    }
                 }
+                for (int x = 0; x < islandsP1.Length; x++)
+                {
+                    if (selected == islandsP1[x])
+                    {
+                        islandsP1[x].GetComponent<Island>().health -= 1;
+                    }
+                }                
             }
+            turn = !turn;
             selected = null;
         }
     }
